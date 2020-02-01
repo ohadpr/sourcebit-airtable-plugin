@@ -1,17 +1,19 @@
 {
-  "name": "airtable-plugin-test",
+  "name": "sourcebit-airtable-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Airtable plugin for Sourcebit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "sourcebit",
+    "airtable"
+  ],
+  "author": "me@ohadpr.com",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "sourcebit-sample-plugin": "^0.1.0",
-    "sourcebit-target-jekyll": "^0.3.0"
+    "airtable": "^0.8.1",
+    "lodash": "^4.17.15"
   }
 }

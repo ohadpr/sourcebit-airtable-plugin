@@ -1,7 +1,7 @@
 module.exports = {
     plugins: [
     {
-        module: require('./sourcebit-airtable-plugin'),
+        module: require('../'),
         options: {
             baseId: "appL6vJByD0dxVlnA",
             tables: ["poems", "words"]
