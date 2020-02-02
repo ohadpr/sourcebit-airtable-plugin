@@ -64,7 +64,7 @@ module.exports.bootstrap = async ({
 
     const context = getPluginContext();
 
-    if (context && context.entries && false) {
+    if (context && context.entries) {
         log(`Loaded ${context.entries.length} entries from cache`);
     } else {
         // get data
