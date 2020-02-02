@@ -10,7 +10,7 @@ module.exports.options = {
         private: true
     },
     baseId: {},
-    tables: [],
+    tables: {},
     watch: {
         // 👉 By default, the value of this option will be `false`.
         default: false,
@@ -68,12 +68,12 @@ module.exports.bootstrap = async ({
         log(`Loaded ${context.entries.length} entries from cache`);
     } else {
         // get data
-        const entries = await options.tables.reduce((acc, table) => {
+        const entries = await _.reduce(options.tables, (acc, fields, table) => {
             return acc.then(entries => {
 
                 entries[table] = [];
                 return base(table).select({
-                    // fields: [] // TODO: get only requested of the fields
+                    fields: fields,
                     view: "Grid view"
                 }).eachPage((records, fetchNextPage) => {
                     records.forEach(record => {

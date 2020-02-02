@@ -4,7 +4,10 @@ module.exports = {
         module: require('../'),
         options: {
             baseId: "appL6vJByD0dxVlnA",
-            tables: ["poems", "words"]
+            tables: {
+                "poems": ['Start', 'Finish'],
+                "words": ['Word']
+            }
         }
     },
     {
